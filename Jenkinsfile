@@ -38,13 +38,13 @@ pipeline{
 	}
 	post{
 		always{
-			echo "I always run"
+			echo 'I always run'
 		}
 		success{
-			echo "I run when pipeline is successful"
+			echo 'I run when pipeline is successful'
 		}
-		failur{
-			echo "I run when the pipeline fail"
+		failure{
+			echo 'I run when the pipeline fail'
 		}
 	}
 }
