@@ -8,7 +8,7 @@ node {
 		echo "Test"
 	}
 	stage('Integration Test') {
-		echo "Test"
+		echo "Integration Test"
 	}
 }
 
@@ -34,6 +34,17 @@ pipeline{
 				echo "Declarative Pipeline"
 				echo "Integration Test stage"
 			}
+		}
+	}
+	post{
+		always{
+			echo "I always run"
+		}
+		success{
+			echo "I run when pipeline is successful"
+		}
+		failur{
+			echo "I run when the pipeline fail"
 		}
 	}
 }
