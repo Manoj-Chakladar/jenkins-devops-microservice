@@ -25,6 +25,8 @@ pipeline{
 	stages{
 		stage('Build'){
 			steps{
+				sh 'mvn --version'
+				sh 'docker version'
 				echo "Declarative Pipeline"
 				echo "Build stage"
 				echo "PATH - $PATH"
