@@ -15,13 +15,16 @@ node {
 
 //Declarative Pipeline
 pipeline{
-	//agent any
-	agent { docker {image 'maven:3.6.3'}}
+	agent any
+	// agent { docker {image 'maven:3.6.3'}}
 	stages{
 		stage('Build'){
 			steps{
 				echo "Declarative Pipeline"
 				echo "Build stage"
+				echo "PATH - $PATH"
+				echo "BUILD_NUMBER - $env.BUILD_NUMBER"
+				echo "BUILD_ID - $env.BUILD_ID"
 			}
 		}
 		stage('Test'){
